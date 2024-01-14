@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/538b042d3c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <section>
+      <form action="/" method="POST" class="input-box">
+        <input
+          class="search"
+          type="text"
+          name="newItem"
+          placeholder="Search location"
+          autocomplete="off"
+          required="required"
+        />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+
+      <div class="weather-app">
+        <% if (locals.city && locals.country && locals.temp && locals.humidity && locals.pressure && locals.wind && locals.sunrise && locals.sunset )  { %>
+        <div class="central box">
+          <h1 class="city"><%= city%>, <%=country%> </h1>
+          <h2 class="temperature"><%=temp%>° C</h2>
+          <img class="cloud" src="/images/clear-sky.png" alt="cloud" height="100" />
+        </div>
+        <div class="wind box"><h3>Wind Speed <i class="fa-solid fa-wind"></i></h3><p class="left"><%= wind%> km/h</p></div>
+        <div class="humidity box"><h3>Humidity <i class="fa-solid fa-droplet"></i></i></h3><p class="left"><%= humidity%> %</p></div>
+        <div class="pressure box"><h3>Pressure <i class="fa-solid fa-water"></i></h3><p class="left"><%= pressure%>mm</p></div>
+        <div class="box"><h3>Dawn time <i class="fa-regular fa-sun"></i></h3><p class="left"> <%= sunrise%>:<%= minutesSunrise%> </p></div>
+        <div class="box"><h3>Dusk time <i class="fa-solid fa-sun"></i></h3><p class="left"><%= sunset%>:<%= minutesSunset%></p></div>
+        <% } %>    
+      </div>
+
+    
+
+      <footer>
+            <p class="copyright">Copyright © <%= new Date().getFullYear() %>
+            </p>
+        </footer>
+    </section>
+  </body>
+</html>
