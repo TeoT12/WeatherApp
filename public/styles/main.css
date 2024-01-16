@@ -1,3 +1,154 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+section {
+  background: url(/images/pic.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-box {
+  margin-top: 20px;
+  width: 300px;
+  position: relative;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.search {
+  background: transparent;
+  color: black;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1em 2em;
+  width: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+
+.search:focus::-webkit-input-placeholder {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.search::placeholder {
+  color: black;
+}
+
+.weather-app {
+  width: 850px;
+  height: 400px;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  padding: 15px 15px;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+
+  display: grid;
+  grid-template-columns: 260px 260px 260px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 19px;
+}
+
+.box {
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+h3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.temperature {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  font-size: 50px;
+}
+
+.cloud {
+  position: absolute;
+  right: 70px;
+  top: 60px;
+}
+
+.city {
+  position: absolute;
+  left: 50px;
+  bottom: 150px;
+  font-size: 30px;
+}
+
+.central {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.wind {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.humidity {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.pressure {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.left {
+  font-size: 30px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+footer p {
+  font-size: 15px;
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+  color: #050505;
+}
+
 @media (min-width: 319px) and (max-width: 500px) {
    .weather-app {
     width: 440px;
@@ -73,3 +224,4 @@
     top: 200px;
   }
 }
+
