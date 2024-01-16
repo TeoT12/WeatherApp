@@ -149,7 +149,7 @@ footer p {
   color: #050505;
 }
 
-@media (min-width: 319px) and (max-width: 500px) {
+@media (max-width: 500px) {
    .weather-app {
     width: 440px;
     height: 500px;
